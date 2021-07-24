@@ -48,6 +48,7 @@ public class ValidationItemControllerV2 {
     @PostMapping("/add")
     public String addItemV1(@ModelAttribute Item item, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model) {
 
+        //오류가 발생했을 때, 유저가 기존에 입력했던 값이 남지 않는다.
         //검증 로직
         if (!StringUtils.hasText(item.getItemName())){
             bindingResult.addError(new FieldError("item","itemName","상품 이름은 필수입니다."));
