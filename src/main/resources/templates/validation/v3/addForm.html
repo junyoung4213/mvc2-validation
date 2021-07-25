@@ -28,7 +28,6 @@
             <p class="field-error" th:each="err : ${#fields.globalErrors()}" th:text="${err}">글로벌 오류 메시지</p>
         </div>
 
-
         <div>
             <label for="itemName" th:text="#{label.item.itemName}">상품명</label>
             <input type="text" id="itemName" th:field="*{itemName}"
